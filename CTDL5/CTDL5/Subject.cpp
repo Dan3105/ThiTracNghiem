@@ -1,26 +1,86 @@
-#include "Class.h"
+#include "Subject.h"
 
-bool ListClass::SearchByID(int pos, string s) {
-	return nodes[pos].GetID() == s;
+//Cau truc mon
+//Copy constructor
+Subject::Subject(string id, string name)
+{
+	this->id = id;
+	this->name = name;
+}
+Subject::Subject(Subject* other) { *this = *other; }
+
+
+//Cau truc danh sach mon
+//Functions
+Subject* ListSubject::GetNode(int pos)
+{
+	if (pos <= 0 || pos > size) return nullptr;
+	return nodes[pos];
 }
 
-bool ListClass::SearchByName(int pos, string s) {
-	return nodes[pos].GetName() == s;
-}
 
-Class ListClass::SearchClass(string s, bool(*cmp)(int, string))
+bool  ListSubject::SearchSubID(int pos, string id) {
+	return nodes[pos]->GetID() == id;
+}
+bool  ListSubject::SearchSubName(int pos, string name) {
+	return nodes[pos]->GetName() == name;
+}
+Subject* ListSubject::SearchSubject(string s, bool(*cmp)(int, string))
 {
 	for (int i = 0; i < size; i++)
-	{
 		if (cmp(i, s)) return nodes[i];
-	}
+
+	return nullptr;
 }
 
-int ListClass::AddClass(Class c)
-{
-	//Neu danh sach day => khong the them
-	if (size == MAX_LIST) return 0;
 
-	nodes[size++] = c;
-	return 1;	//Them thanh cong
+void ListSubject::ClearList()
+{
+	for (int i = 0; i < MAX_LIST; i++) delete nodes[i];
+	size = 0;
+}
+
+
+int ListSubject::AddSubjectAt(Subject new_sub, int pos)
+{
+	//Khong the them mon hoc vi da day danh sach
+	//Hoac do vi tri muon them nhap sai
+	if (size == MAX_LIST || pos < 0) return 0;
+
+	if (size == 0) pos = size; //Mang rong
+	else if (pos > size) pos = size; //Neu pos > size thi them vao cuoi
+	for (int i = size; i > pos; i--) nodes[i] = nodes[i - 1];
+	nodes[pos] = new Subject(new_sub);
+	size++;
+	//Them thanh cong
+	return 1;
+}
+int ListSubject::DelSubjectAt(int pos)
+{
+	//Khong the xoa vi danh sach rong
+	//Hoac do vi tri muon xoa nhap sai
+	if (size == 0 || pos < 0 || pos > size) return 0;
+
+	for (int i = pos; i < size; i++) nodes[i] = nodes[i + 1];
+	size--;
+	//Xoa thanh cong
+	return 1;
+}
+
+
+int ListSubject::ChangeSubjectId(string id, int pos)
+{
+	if (size == 0 || pos < 0 || pos > size - 1) return 0;
+
+	nodes[pos]->SetID(id);
+	//Thay doi thanh cong
+	return 1;
+}
+int ListSubject::ChangeSubjectName(string name, int pos)
+{
+	if (size == 0 || pos < 0 || pos > size - 1) return 0;
+
+	nodes[pos]->SetName(name);
+	//Thay doi thanh cong
+	return 1;
 }

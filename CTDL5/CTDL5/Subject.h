@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-
 using namespace std;
 #define MAX_LIST 10000
 
@@ -23,10 +22,10 @@ public:
 
 
 	//Functions
-	string getID() { return this->id; }
-	string getName() { return this->name; }
-	void setID(string id) { this->id = id; }
-	void setName(string name) { this->name = name; }
+	string GetID() { return this->id; }
+	string GetName() { return this->name; }
+	void SetID(string id) { this->id = id; }
+	void SetName(string name) { this->name = name; }
 };
 
 
@@ -47,7 +46,7 @@ public:
 
 	bool SearchSubID(int position, string id);
 	bool SearchSubName(int position, string name);
-	Subject* SearchNode(string s, bool(*cmp)(int, string));
+	Subject* SearchSubject(string s, bool(*cmp)(int, string));
 	void ClearList();
 
 	int AddSubjectAt(Subject new_sub, int pos);
