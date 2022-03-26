@@ -13,21 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\DataStructure">
+      <UniqueIdentifier>{dd459ca8-daba-408c-bbe3-844c7b8eec91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataStructure">
+      <UniqueIdentifier>{b43b3936-346e-4c62-8510-c5a56805db02}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Subject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DataStructure</Filter>
     </ClInclude>
     <ClInclude Include="Student.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\DataStructure</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Subject.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
     <ClCompile Include="Student.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\DataStructure</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

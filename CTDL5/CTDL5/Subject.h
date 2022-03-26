@@ -4,7 +4,7 @@
 #include <fstream>
 
 using namespace std;
-#define MAX_LIST 10000
+#define MAX_LIST 1000
 
 //STRUCT MON HOC
 class Subject
@@ -14,8 +14,8 @@ private:
 	string name;
 public:
 	//Constructor & Destructor
-	Subject() { };
-	~Subject() { };
+	Subject();
+	~Subject();
 
 	//Copy constructor
 	Subject(string id, string name);
@@ -23,10 +23,10 @@ public:
 
 
 	//Functions
-	string getID() { return this->id; }
-	string getName() { return this->name; }
-	void setID(string id) { this->id = id; }
-	void setName(string name) { this->name = name; }
+	string getID();
+	string getName();
+	void setID(string id);
+	void setName(string name);
 };
 
 
@@ -34,25 +34,26 @@ public:
 class ListSubject
 {
 private:
-	Subject* nodes[MAX_LIST]{ nullptr };
-	int size = 0;
+	Subject* nodes[MAX_LIST];
+	int size;
 public:
 	//Constructor & Destructor
-	ListSubject() { }
+	ListSubject() { size = 0; }
 	~ListSubject() { }
 
 	//Functions
-	int GetSize() { return this->size; }
-	Subject* GetNode(int pos);
+	int getSize();
+	void setSize(int size);	//Cai nay t thay hoi thua khong dung den :v
+	Subject* getNode(int pos);
 
-	bool SearchSubID(int position, string id);
-	bool SearchSubName(int position, string name);
-	Subject* SearchNode(string s, bool(*cmp)(int, string));
-	void ClearList();
+	bool searchSubID(int position, string id);
+	bool searchSubName(int position, string name);
+	Subject* searchNode(string s, bool(*cmp)(int, string));
+	void clearList();
 
-	int AddSubjectAt(Subject new_sub, int pos);
-	int DelSubjectAt(int position);
+	int add_sub_at(Subject new_sub, int pos);
+	int del_sub_at(int position);
 
-	int ChangeSubjectId(string id, int pos);
-	int ChangeSubjectName(string name, int pos);
+	int change_subject_id(string id, int pos);
+	int change_subject_name(string name, int pos);
 };
