@@ -24,14 +24,8 @@
     <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Score.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Score.cpp">
-      <Filter>Source Files\DataStruct</Filter>
-    </ClCompile>
     <ClCompile Include="Student.cpp">
       <Filter>Source Files\DataStruct</Filter>
     </ClCompile>
