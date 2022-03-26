@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\DataStruct">
+      <UniqueIdentifier>{9b792ea1-09e3-4269-afd8-c07d097abc67}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Subject.h">
@@ -26,14 +29,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Subject.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Score.cpp">
+      <Filter>Source Files\DataStruct</Filter>
     </ClCompile>
     <ClCompile Include="Student.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\DataStruct</Filter>
     </ClCompile>
-    <ClCompile Include="Score.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Subject.cpp">
+      <Filter>Source Files\DataStruct</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
