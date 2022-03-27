@@ -1,0 +1,19 @@
+﻿  Class.cpp
+  Mark.cpp
+  Student.cpp
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Student.cpp(28,20): error C2084: function 'Student::Student(void)' already has a body
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Student.h(28): message : see previous definition of '{ctor}'
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Student.cpp(31,1): error C2084: function 'Student::Student(std::string,std::string,std::string,char,std::string)' already has a body
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Student.h(29): message : see previous definition of '{ctor}'
+  Subject.cpp
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(119,1): error C2084: function 'void ListSubject::ClearList(void)' already has a body
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(38): message : see previous definition of 'ClearList'
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(126,1): error C2084: function 'int ListSubject::AddSubjectAt(Subject,int)' already has a body
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(76): message : see previous definition of 'AddSubjectAt'
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(140,1): error C2084: function 'int ListSubject::DelSubjectAt(int)' already has a body
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(90): message : see previous definition of 'DelSubjectAt'
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(153,1): error C2084: function 'int ListSubject::ChangeSubjectId(std::string,int)' already has a body
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(103): message : see previous definition of 'ChangeSubjectId'
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(161,1): error C2084: function 'int ListSubject::ChangeSubjectName(std::string,int)' already has a body
+E:\ThiTracNghiem\DoAnTracNghiem\main\main\Subject.cpp(111): message : see previous definition of 'ChangeSubjectName'
+  Generating Code...

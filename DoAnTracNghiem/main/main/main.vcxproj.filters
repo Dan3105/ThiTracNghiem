@@ -13,21 +13,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\CTDL">
+      <UniqueIdentifier>{421ad03a-9f11-4ce5-8e86-63b4f56f3e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CTDL">
+      <UniqueIdentifier>{f95e1949-2aac-49bd-bfb8-7a1f431acf8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CTDL\HoangWeeb">
+      <UniqueIdentifier>{c6ebd581-8774-415d-8e00-1bc862b8f2d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CTDL\HoangWeeb">
+      <UniqueIdentifier>{40c287d3-3d8b-4bef-8343-9eef0f02a2f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CTDL\HuyGay">
+      <UniqueIdentifier>{8c4d6392-e433-4699-a426-d4afcd8b7949}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CTDL\HuyGay">
+      <UniqueIdentifier>{46240202-b2e6-4463-8a80-9d18c775198f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CTDL\DanhBoDoy">
+      <UniqueIdentifier>{bbffe0e6-cc82-4829-9dab-83172823ac72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CTDL\DanhBoDoy">
+      <UniqueIdentifier>{e9d0849d-01fb-4b80-afd2-cb48eb83b836}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Subject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\CTDL\HoangWeeb</Filter>
     </ClInclude>
     <ClInclude Include="Class.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\CTDL\HoangWeeb</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Header Files\CTDL\DanhBoDoy</Filter>
+    </ClInclude>
+    <ClInclude Include="Mark.h">
+      <Filter>Header Files\CTDL\DanhBoDoy</Filter>
+    </ClInclude>
+    <ClInclude Include="Student.h">
+      <Filter>Header Files\CTDL\DanhBoDoy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Subject.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\CTDL</Filter>
     </ClCompile>
     <ClCompile Include="Class.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\CTDL\HoangWeeb</Filter>
+    </ClCompile>
+    <ClCompile Include="Subject.cpp">
+      <Filter>Source Files\CTDL\HoangWeeb</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>Source Files\CTDL\DanhBoDoy</Filter>
+    </ClCompile>
+    <ClCompile Include="Mark.cpp">
+      <Filter>Source Files\CTDL\DanhBoDoy</Filter>
+    </ClCompile>
+    <ClCompile Include="Student.cpp">
+      <Filter>Source Files\CTDL\DanhBoDoy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
