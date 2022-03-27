@@ -31,6 +31,7 @@ Subject* ListSubject::SearchSubject(string s, bool(*cmp)(int, string))
 		if (cmp(i, s)) return nodes[i];
 
 	return nullptr;
+<<<<<<< HEAD
 }
 
 
@@ -111,6 +112,57 @@ int ListSubject::ChangeSubjectName(string name, int pos)
 {
 	if (size == 0 || pos < 0 || pos > size - 1) return 0;
 
+=======
+}
+
+
+void ListSubject::ClearList()
+{
+	for (int i = 0; i < MAX_LIST; i++) delete nodes[i];
+	size = 0;
+}
+
+
+int ListSubject::AddSubjectAt(Subject new_sub, int pos)
+{
+	//Khong the them mon hoc vi da day danh sach
+	//Hoac do vi tri muon them nhap sai
+	if (size == MAX_LIST || pos < 0) return 0;
+
+	if (size == 0) pos = size; //Mang rong
+	else if (pos > size) pos = size; //Neu pos > size thi them vao cuoi
+	for (int i = size; i > pos; i--) nodes[i] = nodes[i - 1];
+	nodes[pos] = new Subject(new_sub);
+	size++;
+	//Them thanh cong
+	return 1;
+}
+int ListSubject::DelSubjectAt(int pos)
+{
+	//Khong the xoa vi danh sach rong
+	//Hoac do vi tri muon xoa nhap sai
+	if (size == 0 || pos < 0 || pos > size) return 0;
+
+	for (int i = pos; i < size; i++) nodes[i] = nodes[i + 1];
+	size--;
+	//Xoa thanh cong
+	return 1;
+}
+
+
+int ListSubject::ChangeSubjectId(string id, int pos)
+{
+	if (size == 0 || pos < 0 || pos > size - 1) return 0;
+
+	nodes[pos]->SetID(id);
+	//Thay doi thanh cong
+	return 1;
+}
+int ListSubject::ChangeSubjectName(string name, int pos)
+{
+	if (size == 0 || pos < 0 || pos > size - 1) return 0;
+
+>>>>>>> 300122a775afbc123955841661b7d2ff47c77daa
 	nodes[pos]->SetName(name);
 	//Thay doi thanh cong
 	return 1;

@@ -140,12 +140,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Class.h" />
+<<<<<<< HEAD
     <ClInclude Include="Student.h" />
+=======
+>>>>>>> 300122a775afbc123955841661b7d2ff47c77daa
     <ClInclude Include="Subject.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Class.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Student.cpp" />
+=======
+>>>>>>> 300122a775afbc123955841661b7d2ff47c77daa
     <ClCompile Include="Subject.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

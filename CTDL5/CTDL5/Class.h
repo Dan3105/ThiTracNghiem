@@ -11,7 +11,9 @@ class Class
 private:
 	string id;
 	string name;
-	//ListStudent list;	//Con tro den danh sach sinh vien
+
+	ListStudent list;	//Lop tro den danh sach sinh vien
+
 public:
 	//Constructor
 	Class() { }
