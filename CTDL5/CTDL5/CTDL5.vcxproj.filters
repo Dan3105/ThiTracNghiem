@@ -27,6 +27,9 @@
     <ClInclude Include="Student.h">
       <Filter>Header Files\DataStructure</Filter>
     </ClInclude>
+    <ClInclude Include="Class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Subject.cpp">
@@ -34,6 +37,9 @@
     </ClCompile>
     <ClCompile Include="Student.cpp">
       <Filter>Source Files\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="Class.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
