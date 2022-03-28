@@ -21,11 +21,12 @@ public:
 	Subject(Subject*);
 
 	//Functions
-	string GetID() { return this->id; }
-	string GetName() { return this->name; }
-	void SetID(string id) { this->id = id; }
-	void SetName(string name) { this->name = name; }
-	void SetAll(string id, string name);
+	string getId() const;
+	void setId(string id);
+
+	string getName() const;
+	void setName(string name);
+
 };
 
 

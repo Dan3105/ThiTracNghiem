@@ -8,12 +8,26 @@ Subject::Subject(string id, string name)
 	this->name = name;
 }
 Subject::Subject(Subject* other) { *this = *other; }
-void Subject::SetAll(string id, string name)
+
+string Subject::getId() const
 {
-	this->id = id;
-	this->name = name;
+	return id;
 }
 
+void Subject::setId(string id)
+{
+	this->id = id;
+}
+
+string Subject::getName() const
+{
+	return name;
+}
+
+void Subject::setName(string name)
+{
+	this->name = name;
+}
 
 //Cau truc danh sach mon
 //Functions
@@ -24,11 +38,12 @@ Subject* ListSubject::GetNode(int pos)
 }
 
 
+
 bool  ListSubject::SearchByID(int pos, string id) {
-	return nodes[pos]->GetID() == id;
+	return nodes[pos]->getId() == id;
 }
 bool  ListSubject::SearchByName(int pos, string name) {
-	return nodes[pos]->GetName() == name;
+	return nodes[pos]->getName() == name;
 }
 Subject* ListSubject::SearchSubject(string s, ListSubject* obj, bool(ListSubject::* cmp)(int, string))
 {
@@ -59,10 +74,10 @@ int ListSubject::AddSubject(Subject new_sub)
 {
 	if (size == MAX_LIST) return 0;
 	int pos = size;
-	string id = new_sub.GetID();
+	string id = new_sub.getId();
 	for (int i = 0; i < size; i++)
 	{
-		if (ListSubject::StringCompare(id, nodes[i]->GetName()))
+		if (ListSubject::StringCompare(id, nodes[i]->getName()))
 		{
 			pos = i;
 			break;
@@ -110,7 +125,7 @@ int ListSubject::ChangeSubjectId(string id, int pos)
 {
 	if (size == 0 || pos < 0 || pos > size - 1) return 0;
 
-	nodes[pos]->SetID(id);
+	nodes[pos]->setId(id);
 	//Thay doi thanh cong
 	return 1;
 }
@@ -118,7 +133,9 @@ int ListSubject::ChangeSubjectName(string name, int pos)
 {
 	if (size == 0 || pos < 0 || pos > size - 1) return 0;
 
-	nodes[pos]->SetName(name);
+	nodes[pos]->setName(name);
 	//Thay doi thanh cong
 	return 1;
 }
+
+
