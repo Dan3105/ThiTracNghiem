@@ -9,23 +9,23 @@ using namespace std;
 class Subject
 {
 private:
-	string id;	//max id contain 15 characters
-	string name;
+	string id = "";	//max id contain 15 characters
+	string name = "";
 public:
 	//Constructor & Destructor
 	Subject() { };
 	~Subject() { };
 
 	//Copy constructor
-	Subject(string id, string name);
-	Subject(Subject* other);
-
+	Subject(string, string);
+	Subject(Subject*);
 
 	//Functions
 	string GetID() { return this->id; }
 	string GetName() { return this->name; }
 	void SetID(string id) { this->id = id; }
 	void SetName(string name) { this->name = name; }
+	void SetAll(string id, string name);
 };
 
 
@@ -42,17 +42,21 @@ public:
 
 	//Functions
 	int GetSize() { return this->size; }
-	Subject* GetNode(int pos);
+	Subject* GetNode(int);
 
-	bool SearchSubID(int position, string id);
-	bool SearchSubName(int position, string name);
-	Subject* SearchSubject(string s, bool(*cmp)(int, string));
+	bool SearchByID(int, string);
+	bool SearchByName(int, string);
+	Subject* SearchSubject(string, ListSubject*, bool(ListSubject::* cmp)(int, string));
 	void ClearList();
 
-	int AddSubject(Subject new_sub);	//Them mon hoc theo trinh tu id
-	int AddSubjectAt(Subject new_sub, int pos);
-	int DelSubjectAt(int position);
+	//Them mon hoc theo trinh tu id
+	bool StringCompare(string, string);
+	int AddSubject(Subject);
 
-	int ChangeSubjectId(string id, int pos);
-	int ChangeSubjectName(string name, int pos);
+	//Them mon hoc theo vi tri
+	int AddSubjectAt(Subject, int);
+	int DelSubjectAt(int);
+
+	int ChangeSubjectId(string, int);
+	int ChangeSubjectName(string, int);
 };

@@ -9,14 +9,15 @@ using namespace std;
 class Class
 {
 private:
-	string id;
-	string name;
+	string id = "";
+	string name = "";
 	ListStudent list;	//Lop tro den danh sach sinh vien
 public:
 	//Constructor
 	Class() { }
 	~Class() { }
 
+	void SetAll(string, string);
 	void SetID(string s) { this->id = s; }
 	void SetName(string s) { this->name = s; }
 	string  GetID() { return id; }
@@ -33,10 +34,13 @@ public:
 	ListClass() { }
 	~ListClass() { }
 
-	bool SearchByID(int pos, string s);
-	bool SearchByName(int pos, string s);
-	Class* SearchClass(string s, bool(*cmp)(int, string));
+	Class* GetNode(int);
 
-	int AddClass(Class c);	//Them theo trinh tu
-	int DeleteClass(int position);	//Xoa o vi tri
+	bool SearchByID(int, string);
+	bool SearchByName(int, string);
+	Class* SearchClass(string, ListClass*, bool(ListClass::* cmp)(int, string));
+
+	bool StringCompare(string, string);
+	int AddClass(Class);	//Them theo trinh tu
+	int DeleteClass(int);	//Xoa o vi tri
 };

@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-//khu vuc nay de test chuong trinh 
+//Test chuong trinh
 int main()
 {
 
+	return 0;
 }
