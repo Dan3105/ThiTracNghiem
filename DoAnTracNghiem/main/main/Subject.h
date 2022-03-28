@@ -17,8 +17,8 @@ public:
 	~Subject() { };
 
 	//Copy constructor
-	Subject(string id, string name);
-	Subject(Subject* other);
+	Subject(string, string);
+	Subject(Subject*);
 
 	//Functions
 	string GetID() { return this->id; }
@@ -42,21 +42,21 @@ public:
 
 	//Functions
 	int GetSize() { return this->size; }
-	Subject* GetNode(int pos);
+	Subject* GetNode(int);
 
-	bool SearchByID(int position, string id);
-	bool SearchByName(int position, string name);
-	Subject* SearchSubject(string s, ListSubject* obj, bool(ListSubject::* cmp)(int, string));
+	bool SearchByID(int, string);
+	bool SearchByName(int, string);
+	Subject* SearchSubject(string, ListSubject*, bool(ListSubject::* cmp)(int, string));
 	void ClearList();
 
 	//Them mon hoc theo trinh tu id
-	bool StringCompare(string s1, string s2);
-	int AddSubject(Subject new_sub);
+	bool StringCompare(string, string);
+	int AddSubject(Subject);
 
 	//Them mon hoc theo vi tri
 	int AddSubjectAt(Subject, int);
 	int DelSubjectAt(int);
 
-	int ChangeSubjectId(string id, int pos);
-	int ChangeSubjectName(string name, int pos);
+	int ChangeSubjectId(string, int);
+	int ChangeSubjectName(string, int);
 };
