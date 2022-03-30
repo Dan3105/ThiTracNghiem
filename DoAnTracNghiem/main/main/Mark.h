@@ -1,20 +1,26 @@
-#include "Subject.h"
+//#include "Subject.h"
 #include "LinkedList.h"
+#include <iostream>
+#pragma once
+using namespace std;
 class Mark
 {
 private:
-	Subject* idSubject;
+	//Subject* idSubject;
 	string idSub;
 	float mark;
 public:
-    string getIdSub() const;
+	string getIdSub() const;
 
-    float getMark() const;
-    void setMark(float mark);
+	float getMark() const;
+	void setMark(float mark);
 
 	Mark();
-	Mark(Subject*, float);
+	//Mark(Subject*, float);
+	Mark(string, float);
 };
+
+
 
 class ListMark
 {
@@ -25,8 +31,19 @@ public:
 	~ListMark();
 
 	int AddMark(Mark);
-	int DeleteMarkBase(bool (*)(const Mark&), bool);
-	Node<Mark>* FindMark(bool (*)(const Mark&));// only base on idSub(idSubject)
+
+	template <typename S>
+	int DeleteMarkBase(S cmp, bool clearAll)
+	{
+		return listMark.DeleteBase(cmp, clearAll);
+	}
+
+	template <typename S>
+	Node<Mark>* FindMark(S cmp)
+	{
+		return listMark.FindElement(cmp);
+	}
+	// only base on idSub(idSubject)
 
 	void SortListStudent(bool (*cmp)(Mark, Mark));
 };

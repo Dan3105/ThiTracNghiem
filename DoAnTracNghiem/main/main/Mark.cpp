@@ -1,4 +1,5 @@
 #include "Mark.h"
+
 #pragma region Mark
 string Mark::getIdSub() const
 {
@@ -15,31 +16,30 @@ void Mark::setMark(float mark)
     this->mark = mark;
 }
 
-Mark::Mark() : idSubject(nullptr), idSub(""), mark(0) {};
+//Mark::Mark() : idSubject(nullptr), idSub(""), mark(0) {};
+Mark::Mark() : idSub(""), mark(0) {};
 
-Mark::Mark(Subject* _idSubject, float _mark)
+//Mark::Mark(Subject* _idSubject, float _mark)
+//{
+//    idSubject = _idSubject;
+//    idSub = idSubject->getId();
+//    mark = _mark;
+//}
+
+Mark::Mark(string _idSubject, float _mark)
 {
-    idSubject = _idSubject;
-    idSub = idSubject->GetID();
+    idSub = _idSubject;
     mark = _mark;
 }
 
 #pragma endregion
 
 #pragma region ListMark
+ListMark::ListMark() {};
+
 int ListMark::AddMark(Mark _data)
 {
     return listMark.AddNode(_data);
-}
-
-int ListMark::DeleteMarkBase(bool(*cmp)(const Mark&), bool clearAll)
-{
-    return listMark.DeleteBase(cmp, clearAll);
-}
-
-Node<Mark>* ListMark::FindMark(bool(*cmp)(const Mark&))
-{
-    return listMark.FindElement(cmp);
 }
 
 void ListMark::SortListStudent(bool(*cmp)(Mark, Mark))

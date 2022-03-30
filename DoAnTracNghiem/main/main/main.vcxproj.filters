@@ -65,9 +65,6 @@
     <ClCompile Include="Subject.cpp">
       <Filter>Source Files\CTDL\HoangWeeb</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>Source Files\CTDL\DanhBoDoy</Filter>
-    </ClCompile>
     <ClCompile Include="Mark.cpp">
       <Filter>Source Files\CTDL\DanhBoDoy</Filter>
     </ClCompile>
