@@ -146,6 +146,10 @@
     <ClInclude Include="Mark.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
+    <ClInclude Include="Question.h" />
+    <ClInclude Include="QuestionList.h" />
+    <ClInclude Include="QuestionNode.h" />
+    <ClInclude Include="QuestionTree.h" />
     <ClInclude Include="Student.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
@@ -157,6 +161,10 @@
     <ClCompile Include="Mark.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="Question.cpp" />
+    <ClCompile Include="QuestionList.cpp" />
+    <ClCompile Include="QuestionNode.cpp" />
+    <ClCompile Include="QuestionTree.cpp" />
     <ClCompile Include="Student.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>

@@ -54,6 +54,18 @@
     <ClInclude Include="Student.h">
       <Filter>Header Files\CTDL\DanhBoDoy</Filter>
     </ClInclude>
+    <ClInclude Include="Question.h">
+      <Filter>Header Files\CTDL\HuyGay</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestionList.h">
+      <Filter>Header Files\CTDL\HuyGay</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestionNode.h">
+      <Filter>Header Files\CTDL\HuyGay</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestionTree.h">
+      <Filter>Header Files\CTDL\HuyGay</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -70,6 +82,18 @@
     </ClCompile>
     <ClCompile Include="Student.cpp">
       <Filter>Source Files\CTDL\DanhBoDoy</Filter>
+    </ClCompile>
+    <ClCompile Include="Question.cpp">
+      <Filter>Source Files\CTDL\HuyGay</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestionList.cpp">
+      <Filter>Source Files\CTDL\HuyGay</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestionNode.cpp">
+      <Filter>Source Files\CTDL\HuyGay</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestionTree.cpp">
+      <Filter>Source Files\CTDL\HuyGay</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
