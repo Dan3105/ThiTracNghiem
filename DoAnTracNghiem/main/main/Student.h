@@ -48,8 +48,16 @@ public:
 	~ListStudent();
 	
 	int AddStudent(Student);
-	int DeleteStudentWith(bool (*)(const Student&), bool); // delete base on idStudent
-	Node<Student>* FindStudent(bool (*)(const Student&));
+	template <typename S>
+	int DeleteStudentWith(S cmp, bool clearAll)  // delete base on idStudent
+	{
+		return listStudent.DeleteBase(cmp, clearAll);
+	}
+	template <typename S>
+	Node<Student>* FindStudent(S cmp)
+	{
+		return listStudent.FindElement(cmp);
+	}
 	void SortListStudent(bool (*cmp)(Student, Student));
 };
 

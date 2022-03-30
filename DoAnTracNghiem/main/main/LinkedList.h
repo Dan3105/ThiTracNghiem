@@ -16,7 +16,6 @@ class LinkedList
 private:
 	Node<T>* head;
 	int size = 0;
-	bool isSort;
 	int DeleteNode(Node<T>*& prevNode, Node<T>*& currNode)// currNode : Node need to be deleted;
 	{
 		if (prevNode == currNode && prevNode == head)
@@ -116,7 +115,7 @@ public:
 		head = new Node<T>(_data);
 		size = 1;
 	}
-	~LinkedList();
+	~LinkedList() {};
 
 	int getSize() { return size; }
 
@@ -125,11 +124,9 @@ public:
 		Node<T>* newNode = new Node<T>(_data);
 		newNode->next = head;
 		head = newNode;
-		isSort = false;
 		size++;
 		return 1;
 	}
-	int InsertOrder(T);
 
 	template<typename S>
 	int DeleteBase(S cmp, bool delAll)

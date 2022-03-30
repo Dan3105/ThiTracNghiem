@@ -43,24 +43,17 @@ Student::Student(string _idStudent, string _lastName, string _firstName, char _g
     password = _password;
     listMark = new ListMark();
 }
+
+Student::~Student() {};
 #pragma endregion
 
 #pragma region ListStudent
+ListStudent::ListStudent() {};
+ListStudent::~ListStudent() {};
+
 int ListStudent::AddStudent(Student _data)
 {
     return listStudent.AddNode(_data);
-}
-
-
-
-int ListStudent::DeleteStudentWith(bool (*cmp)(const Student& st), bool clearAll)
-{
-    return listStudent.DeleteBase(cmp, clearAll);
-}
-
-Node<Student>* ListStudent::FindStudent(bool (*cmp)(const Student& st))
-{
-    return listStudent.FindElement(cmp);
 }
 
 void ListStudent::SortListStudent(bool (*cmp)(Student, Student))

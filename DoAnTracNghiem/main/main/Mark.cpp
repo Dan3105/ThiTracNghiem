@@ -36,7 +36,7 @@ Mark::Mark(string _idSubject, float _mark)
 
 #pragma region ListMark
 ListMark::ListMark() {};
-
+ListMark::~ListMark() {};
 int ListMark::AddMark(Mark _data)
 {
     return listMark.AddNode(_data);

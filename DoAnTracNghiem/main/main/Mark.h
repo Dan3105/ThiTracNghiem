@@ -1,7 +1,8 @@
+#pragma once
 //#include "Subject.h"
 #include "LinkedList.h"
 #include <iostream>
-#pragma once
+
 using namespace std;
 class Mark
 {
