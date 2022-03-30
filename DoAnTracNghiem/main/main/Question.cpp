@@ -44,7 +44,7 @@ char Question::getAnswer() const {
 	return this->answer;
 }
 
-void Question::setAutoID(int autoId) {
+void Question::setAutoID(int id) {
 	autoId = id;
 }
 
@@ -61,19 +61,19 @@ void Question::setProblem(const string& problem) {
 }
 
 bool Question::setABCD(const string& abcd, int choose) {
-	if (choose < 1 && choose > 4) {
+	if (choose < 1 || choose > 4) {
 		return 0;
 	}
-	this->abcd[choose] = abcd;
+	this->abcd[choose - 1] = abcd;
 	return 1;
 }
 
 bool Question::setABCD(const string& abcd, char choose) {
-	if (choose == 'A' && choose <= 'D') {
-		choose = choose - 'A' + 'a';
-	}
 	if (choose >= 'a' && choose <= 'd') {
-		int selectedNumber = choose - 'a' + 1;
+		choose -= 32;
+	}
+	if (choose >= 'A' && choose <= 'D') {
+		int selectedNumber = choose - 'A';
 		this->abcd[selectedNumber] = abcd;
 		return 1;
 	}
@@ -81,8 +81,8 @@ bool Question::setABCD(const string& abcd, char choose) {
 }
 
 bool Question::setAnswer(char answer) {
-	if (answer >= 'a' && answer <= 'a') {
-		answer += 32;
+	if (answer >= 'a' && answer <= 'd') {
+		answer -= 32;
 	}
 	if (answer >= 'A' && answer <= 'D') {
 		this->answer = answer;
