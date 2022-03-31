@@ -1,5 +1,23 @@
 ﻿  Class.cpp
   main.cpp
+  Question.cpp
   QuestionList.cpp
-E:\ThiTracNghiem\DoAnTracNghiem\main\main\QuestionList.h(1,10): fatal error C1014: too many include files: depth = 1024
+  QuestionNode.cpp
+  QuestionTree.cpp
+  Subject.cpp
   Generating Code...
+D:\VSCode Projects\ThiTracNghiem\DoAnTracNghiem\main\main\QuestionList.cpp(51): warning C4715: 'QuestionList::PopBack': not all control paths return a value
+D:\VSCode Projects\ThiTracNghiem\DoAnTracNghiem\main\main\Question.cpp(97): warning C4717: 'Question::setAnswer': recursive on all control paths, function will cause runtime stack overflow
+  Mark.cpp
+  Student.cpp
+  Generating Code...
+Mark.obj : error LNK2005: "public: __thiscall ListMark::ListMark(void)" (??0ListMark@@QAE@XZ) already defined in main.obj
+Mark.obj : error LNK2005: "public: __thiscall Mark::Mark(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,float)" (??0Mark@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@M@Z) already defined in main.obj
+Mark.obj : error LNK2005: "public: __thiscall Mark::Mark(void)" (??0Mark@@QAE@XZ) already defined in main.obj
+Mark.obj : error LNK2005: "public: __thiscall ListMark::~ListMark(void)" (??1ListMark@@QAE@XZ) already defined in main.obj
+Mark.obj : error LNK2005: "public: int __thiscall ListMark::AddMark(class Mark)" (?AddMark@ListMark@@QAEHVMark@@@Z) already defined in main.obj
+Mark.obj : error LNK2005: "public: void __thiscall ListMark::SortListStudent(bool (__cdecl*)(class Mark,class Mark))" (?SortListStudent@ListMark@@QAEXP6A_NVMark@@0@Z@Z) already defined in main.obj
+Mark.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __thiscall Mark::getIdSub(void)const " (?getIdSub@Mark@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) already defined in main.obj
+Mark.obj : error LNK2005: "public: float __thiscall Mark::getMark(void)const " (?getMark@Mark@@QBEMXZ) already defined in main.obj
+Mark.obj : error LNK2005: "public: void __thiscall Mark::setMark(float)" (?setMark@Mark@@QAEXM@Z) already defined in main.obj
+D:\VSCode Projects\ThiTracNghiem\DoAnTracNghiem\main\Debug\main.exe : fatal error LNK1169: one or more multiply defined symbols found
