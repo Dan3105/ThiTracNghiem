@@ -48,10 +48,10 @@
     <ClInclude Include="LinkedList.h">
       <Filter>Header Files\CTDL\DanhBoDoy</Filter>
     </ClInclude>
-    <ClInclude Include="Mark.h">
+    <ClInclude Include="MarkScript.h">
       <Filter>Header Files\CTDL\DanhBoDoy</Filter>
     </ClInclude>
-    <ClInclude Include="Student.h">
+    <ClInclude Include="StudentScript.h">
       <Filter>Header Files\CTDL\DanhBoDoy</Filter>
     </ClInclude>
     <ClInclude Include="Question.h">
@@ -68,7 +68,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Test.cpp">
       <Filter>Source Files\CTDL</Filter>
     </ClCompile>
     <ClCompile Include="Class.cpp">
@@ -77,10 +77,10 @@
     <ClCompile Include="Subject.cpp">
       <Filter>Source Files\CTDL\HoangWeeb</Filter>
     </ClCompile>
-    <ClCompile Include="Mark.cpp">
+    <ClCompile Include="MarkScript.cpp">
       <Filter>Source Files\CTDL\DanhBoDoy</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="StudentScript.cpp">
       <Filter>Source Files\CTDL\DanhBoDoy</Filter>
     </ClCompile>
     <ClCompile Include="Question.cpp">

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "Student.h"
+#include "StudentScript.h"
 using namespace std;
 #define MAX_LIST 10000
 

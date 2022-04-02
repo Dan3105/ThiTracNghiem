@@ -143,29 +143,29 @@
     <ClInclude Include="LinkedList.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="Mark.h">
+    <ClInclude Include="MarkScript.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Question.h" />
     <ClInclude Include="QuestionList.h" />
     <ClInclude Include="QuestionNode.h" />
     <ClInclude Include="QuestionTree.h" />
-    <ClInclude Include="Student.h">
+    <ClInclude Include="StudentScript.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Subject.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Class.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Mark.cpp">
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="MarkScript.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Question.cpp" />
     <ClCompile Include="QuestionList.cpp" />
     <ClCompile Include="QuestionNode.cpp" />
     <ClCompile Include="QuestionTree.cpp" />
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="StudentScript.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Subject.cpp" />

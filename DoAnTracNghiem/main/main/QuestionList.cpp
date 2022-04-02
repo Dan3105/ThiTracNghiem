@@ -48,6 +48,7 @@ bool QuestionList::PopBack() {
 
 	delete list[size - 1];
 	size--;
+	return 1;
 }
 
 bool QuestionList::InsertAt(Question* question, int position) {
